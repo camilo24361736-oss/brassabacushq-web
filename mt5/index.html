@@ -1,0 +1,80 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculadora de lote MT5 gratis</title><meta name="description" content="Indicador gratis para MetaTrader 5: calcula el tamaño de lote exacto según tu riesgo. Arrastra el stop loss y listo. Forex, oro, índices y cripto."><style>
+:root{--fg:#1f2937;--muted:#6b7280;--bg:#fff;--card:#f8fafc;--line:#e5e7eb;--btn:#1d4ed8}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:860px;margin:0 auto;padding:24px 16px;color:var(--fg);line-height:1.6;background:var(--bg)}
+a{color:var(--btn)}header{display:flex;align-items:center;gap:12px;margin-bottom:16px}header img{width:48px;height:48px}
+.lang{margin-left:auto;font-size:14px}.lang button{background:none;border:1px solid var(--line);border-radius:6px;padding:2px 8px;cursor:pointer;color:var(--fg)}.lang button[aria-pressed=true]{background:var(--fg);color:#fff}
+h1{font-size:30px;line-height:1.25;margin:8px 0}.sub{font-size:18px;color:var(--muted)}
+ul.b{padding-left:20px}ul.b li{margin:4px 0}
+form{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin:20px 0}
+label{display:block;font-size:14px;margin:8px 0 4px}input[type=email],input[type=text]{width:100%;box-sizing:border-box;padding:10px;border:1px solid #cbd5e1;border-radius:6px;font-size:16px}
+.consent{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:12px}.consent input{margin-top:4px}
+button.go{margin-top:14px;background:var(--btn);color:#fff;border:0;border-radius:6px;padding:12px 18px;font-size:16px;cursor:pointer;width:100%}
+button.go:disabled{opacity:.6;cursor:default}.msg{margin-top:10px;font-size:15px}.ok{color:#047857}.err{color:#b91c1c}
+.hp{position:absolute;left:-5000px}footer{margin-top:48px;font-size:14px;color:var(--muted)}
+[data-l]{display:none}html[lang=es] [data-l=es],html[lang=en] [data-l=en]{display:revert}
+</style></head><body>
+<header><img src="../assets/icon-96.png" alt=""><strong>Brass Abacus · MT5</strong><span class="lang"><button type="button" data-set="es">ES</button> <button type="button" data-set="en">EN</button></span></header>
+
+<div data-l="es">
+<h1>Calculadora de lote gratis para MetaTrader 5</h1>
+<p class="sub">Arrastra tu stop loss en el gráfico y el indicador te dice el lote exacto para arriesgar solo el % que tú quieres.</p>
+<ul class="b">
+<li>Funciona en forex, oro (XAUUSD), índices y cripto: usa las especificaciones reales de tu bróker.</li>
+<li>Muestra lote, dinero en riesgo, ganancia del take profit, relación riesgo:beneficio y margen.</li>
+<li>Riesgo por % del balance, del equity, del margen libre o por monto fijo.</li>
+<li>Redondea el lote hacia abajo: nunca arriesgas más de lo que pediste. Ideal para cuentas de fondeo.</li>
+</ul>
+<p>Déjanos tu correo y te enviamos el enlace de descarga. Confirmas con un clic y listo.</p>
+</div>
+<div data-l="en">
+<h1>Free lot size calculator for MetaTrader 5</h1>
+<p class="sub">Drag your stop loss on the chart and the indicator shows the exact lot size to risk only the % you choose.</p>
+<ul class="b">
+<li>Works on forex, gold (XAUUSD), indices and crypto, using your broker's real contract specs.</li>
+<li>Shows lots, money at risk, take profit reward, risk:reward and margin.</li>
+<li>Risk as % of balance, equity or free margin, or a fixed amount.</li>
+<li>Rounds lots down, so you never risk more than you asked. Great for prop firm accounts.</li>
+</ul>
+<p>Leave your email and we'll send you the download link. Confirm with one click and you're done.</p>
+</div>
+
+<form id="f" novalidate>
+<label for="email"><span data-l="es">Tu correo</span><span data-l="en">Your email</span></label>
+<input id="email" name="EMAIL" type="email" autocomplete="email" required placeholder="nombre@correo.com">
+<label for="fname"><span data-l="es">Tu nombre (opcional)</span><span data-l="en">Your first name (optional)</span></label>
+<input id="fname" name="FIRSTNAME" type="text" autocomplete="given-name" maxlength="60">
+<input class="hp" type="text" name="email_address_check" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="consent"><input id="ok" type="checkbox" name="OPT_IN" value="1" required>
+<label for="ok" style="margin:0"><span data-l="es">Autorizo a Brass Abacus a tratar mi correo para enviarme el indicador, consejos de trading y ofertas de sus productos para MetaTrader, según la <a href="privacy.html">política de privacidad</a>. Puedo darme de baja en cualquier momento con un clic.</span><span data-l="en">I agree that Brass Abacus may use my email to send me the indicator, trading tips and offers for its MetaTrader products, under the <a href="privacy.html">privacy policy</a>. I can unsubscribe at any time with one click.</span></label></div>
+<button class="go" type="submit"><span data-l="es">Enviarme el indicador gratis</span><span data-l="en">Send me the free indicator</span></button>
+<div class="msg" id="m" role="status" aria-live="polite"></div>
+</form>
+
+<p style="font-size:13px;color:var(--muted)"><span data-l="es">El trading con apalancamiento tiene alto riesgo y puedes perder tu capital. Esta herramienta solo calcula tamaños de posición; no es asesoría financiera.</span><span data-l="en">Leveraged trading is high risk and you can lose your capital. This tool only calculates position size; it is not financial advice.</span></p>
+<footer>© 2026 Brass Abacus · <a href="privacy.html">Privacidad / Privacy</a> · brassabacuscontact@gmail.com</footer>
+
+<script>
+// Brevo embedded-form endpoint (Brevo > Contacts > Forms > Share > HTML: copy the form "action" URL here).
+var BREVO_ACTION = "";
+var T={es:{bad:"Escribe un correo válido.",consent:"Marca la casilla de autorización para continuar.",sending:"Enviando…",done:"¡Listo! Revisa tu correo (y la carpeta de spam) y confirma con un clic para recibir el enlace de descarga.",fail:"No pudimos enviar tu solicitud. Inténtalo de nuevo en un minuto.",soon:"El formulario se activa en breve. Vuelve a intentarlo más tarde."},
+en:{bad:"Please enter a valid email.",consent:"Please tick the consent box to continue.",sending:"Sending…",done:"Done! Check your inbox (and spam folder) and confirm with one click to get the download link.",fail:"We couldn't send your request. Please try again in a minute.",soon:"The form will be live shortly. Please try again later."}};
+function lang(){return document.documentElement.lang==="en"?"en":"es"}
+function setLang(l){document.documentElement.lang=l;document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.set===l)});
+document.getElementById("email").placeholder=l==="en"?"name@email.com":"nombre@correo.com";try{localStorage.setItem("ba_lang",l)}catch(e){}}
+var saved=null;try{saved=localStorage.getItem("ba_lang")}catch(e){}
+setLang(saved==="en"||saved==="es"?saved:((navigator.language||"es").toLowerCase().indexOf("es")===0?"es":"en"));
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setLang(b.dataset.set)}});
+var f=document.getElementById("f"),m=document.getElementById("m"),btn=f.querySelector("button.go");
+function say(k,cls){m.textContent=T[lang()][k];m.className="msg "+(cls||"")}
+f.addEventListener("submit",function(ev){ev.preventDefault();
+ var email=f.EMAIL.value.trim();
+ if(f.email_address_check.value)return say("done","ok"); // bot trap
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))return say("bad","err");
+ if(!f.OPT_IN.checked)return say("consent","err");
+ if(!BREVO_ACTION)return say("soon","err");
+ btn.disabled=true;say("sending");
+ var d=new FormData();d.append("EMAIL",email);d.append("FIRSTNAME",f.FIRSTNAME.value.trim());d.append("OPT_IN","1");d.append("email_address_check","");d.append("locale",lang());
+ fetch(BREVO_ACTION,{method:"POST",body:d,mode:"no-cors"}).then(function(){say("done","ok");f.reset()}).catch(function(){say("fail","err")}).finally(function(){btn.disabled=false});
+});
+</script>
+</body></html>
