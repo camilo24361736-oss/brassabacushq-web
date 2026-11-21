@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "version": 1,
+  "updated": "2026-11-21",
+  "note": "ChatShelf page-reading rules (CSS selectors only, no code). Built-in rules ship inside the extension; entries here are tried first so a site change can be fixed without waiting for a store review.",
+  "sites": {}
+}
